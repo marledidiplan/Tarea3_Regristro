@@ -30,8 +30,11 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.FiltrarcomboBox = new System.Windows.Forms.ComboBox();
+            this.CriteriotextBox = new System.Windows.Forms.TextBox();
+            this.Buscarbutton = new System.Windows.Forms.Button();
+            this.ConsultadataGridView = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -52,20 +55,41 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Criterio";
             // 
-            // comboBox1
+            // FiltrarcomboBox
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(67, 21);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
-            this.comboBox1.TabIndex = 2;
+            this.FiltrarcomboBox.FormattingEnabled = true;
+            this.FiltrarcomboBox.Location = new System.Drawing.Point(67, 21);
+            this.FiltrarcomboBox.Name = "FiltrarcomboBox";
+            this.FiltrarcomboBox.Size = new System.Drawing.Size(121, 21);
+            this.FiltrarcomboBox.TabIndex = 2;
             // 
-            // textBox1
+            // CriteriotextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(279, 22);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(257, 20);
-            this.textBox1.TabIndex = 3;
+            this.CriteriotextBox.Location = new System.Drawing.Point(279, 22);
+            this.CriteriotextBox.Name = "CriteriotextBox";
+            this.CriteriotextBox.Size = new System.Drawing.Size(257, 20);
+            this.CriteriotextBox.TabIndex = 3;
+            // 
+            // Buscarbutton
+            // 
+            this.Buscarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Buscarbutton.Image = global::RegristroArticulos.Properties.Resources.magnifying_glass_1976105_960_720;
+            this.Buscarbutton.Location = new System.Drawing.Point(579, 15);
+            this.Buscarbutton.Name = "Buscarbutton";
+            this.Buscarbutton.Size = new System.Drawing.Size(89, 32);
+            this.Buscarbutton.TabIndex = 5;
+            this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.UseVisualStyleBackColor = true;
+            this.Buscarbutton.Click += new System.EventHandler(this.Buscarbutton_Click);
+            // 
+            // ConsultadataGridView
+            // 
+            this.ConsultadataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ConsultadataGridView.Location = new System.Drawing.Point(12, 48);
+            this.ConsultadataGridView.Name = "ConsultadataGridView";
+            this.ConsultadataGridView.Size = new System.Drawing.Size(686, 317);
+            this.ConsultadataGridView.TabIndex = 7;
+            this.ConsultadataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ConsultadataGridView_CellContentClick);
             // 
             // ConsultaA
             // 
@@ -73,13 +97,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.ConsultadataGridView);
+            this.Controls.Add(this.Buscarbutton);
+            this.Controls.Add(this.CriteriotextBox);
+            this.Controls.Add(this.FiltrarcomboBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.IsMdiContainer = true;
             this.Name = "ConsultaA";
             this.Text = "ConsultaA";
+            this.Load += new System.EventHandler(this.ConsultaA_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -89,7 +116,9 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.ComboBox FiltrarcomboBox;
+        private System.Windows.Forms.TextBox CriteriotextBox;
+        private System.Windows.Forms.Button Buscarbutton;
+        private System.Windows.Forms.DataGridView ConsultadataGridView;
     }
 }

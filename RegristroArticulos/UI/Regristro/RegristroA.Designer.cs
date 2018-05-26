@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,7 +45,17 @@
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
+            this.ArticulosIderrorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.DescripcionerrorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.PrecioerrorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.CantidadCotizadaerrorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ExistenciaerrorProvider5 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ArticulosIderrorProvider1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DescripcionerrorProvider2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrecioerrorProvider3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidadCotizadaerrorProvider4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExistenciaerrorProvider5)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -55,6 +66,7 @@
             this.label1.Size = new System.Drawing.Size(59, 13);
             this.label1.TabIndex = 0;
             this.label1.Text = "Articulos Id";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -200,6 +212,26 @@
             this.Guardarbutton.UseVisualStyleBackColor = true;
             this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
+            // ArticulosIderrorProvider1
+            // 
+            this.ArticulosIderrorProvider1.ContainerControl = this;
+            // 
+            // DescripcionerrorProvider2
+            // 
+            this.DescripcionerrorProvider2.ContainerControl = this;
+            // 
+            // PrecioerrorProvider3
+            // 
+            this.PrecioerrorProvider3.ContainerControl = this;
+            // 
+            // CantidadCotizadaerrorProvider4
+            // 
+            this.CantidadCotizadaerrorProvider4.ContainerControl = this;
+            // 
+            // ExistenciaerrorProvider5
+            // 
+            this.ExistenciaerrorProvider5.ContainerControl = this;
+            // 
             // RegristroA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -225,6 +257,11 @@
             this.Text = "Articulos Productos!";
             this.Load += new System.EventHandler(this.RegristroA_Load);
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ArticulosIderrorProvider1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DescripcionerrorProvider2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrecioerrorProvider3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidadCotizadaerrorProvider4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExistenciaerrorProvider5)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,5 +285,10 @@
         private System.Windows.Forms.TextBox ExistenciatextBox;
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.Button Nuevobutton;
+        private System.Windows.Forms.ErrorProvider ArticulosIderrorProvider1;
+        private System.Windows.Forms.ErrorProvider DescripcionerrorProvider2;
+        private System.Windows.Forms.ErrorProvider PrecioerrorProvider3;
+        private System.Windows.Forms.ErrorProvider CantidadCotizadaerrorProvider4;
+        private System.Windows.Forms.ErrorProvider ExistenciaerrorProvider5;
     }
 }

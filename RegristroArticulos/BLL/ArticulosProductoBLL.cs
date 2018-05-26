@@ -27,7 +27,7 @@ namespace RegristroArticulos.BLL
                 }
             }catch(Exception)
             {
-                throw;
+                 throw;
             }
             return paso;
             

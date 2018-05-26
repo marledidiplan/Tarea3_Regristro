@@ -41,7 +41,7 @@ namespace RegristroArticulos.UI.Regristro
             articulosProducto.Descripcion = DescripciontextBox.Text;
             articulosProducto.Precio = Convert.ToInt32(PreciotextBox.Text);
             articulosProducto.Existencia = Convert.ToInt32(ExistenciatextBox.Text);
-            articulosProducto.CantidadCotizada = Convert.ToInt32(CantidadCotizadatextBox);
+            articulosProducto.CantidadCotizada = Convert.ToInt32(CantidadCotizadatextBox.Text);
             return articulosProducto;
         }
 
@@ -97,13 +97,49 @@ namespace RegristroArticulos.UI.Regristro
             if(articulosProducto !=null)
             {
                 DescripciontextBox.Text = articulosProducto.Descripcion;
-                articulosProducto.Precio = Convert.ToInt32(PreciotextBox.Text);
-                articulosProducto.FechaVencimiento = FechaVencimientodateTimePicker.Value;
-                articulosProducto.Existencia = Convert.ToInt32(ExistenciatextBox.Text);
-                articulosProducto.CantidadCotizada = Convert.ToInt32(CantidadCotizadatextBox.Text);
+                PreciotextBox.Text = articulosProducto.Precio.ToString();
+                FechaVencimientodateTimePicker.Value = articulosProducto.FechaVencimiento;
+                ExistenciatextBox.Text=articulosProducto.Existencia.ToString();
+                CantidadCotizadatextBox.Text= articulosProducto.CantidadCotizada.ToString();
 
             }
 
+            
+
+        }
+        private bool Negar(int Negar)
+        {
+            bool paso = false;
+            if (Negar == 1 && IdnumericUpDown.Value == 0)
+            {
+                ArticulosIderrorProvider1.SetError(IdnumericUpDown, "Digite Id del Articulo:");
+                paso = true;
+            }
+            if(Negar==2 && DescripciontextBox.Text == String.Empty)
+            {
+                DescripcionerrorProvider2.SetError(DescripciontextBox, "Ingrese una Descripcion:");
+                paso = true;
+            }
+            if(Negar==2 && PreciotextBox.Text==string.Empty)
+            {
+                PrecioerrorProvider3.SetError(PreciotextBox, "Ingrese el Precio");
+                paso = true;
+            }
+            if(Negar==2 && ExistenciatextBox.Text==string.Empty)
+            {
+                ExistenciaerrorProvider5.SetError(ExistenciatextBox, "Digite Cantidad de Existencia");
+                paso = true;
+
+            }
+            if(Negar==2 && CantidadCotizadatextBox.Text==string.Empty)
+            {
+                CantidadCotizadaerrorProvider4.SetError(CantidadCotizadatextBox, "Digite Cantidad Contizada");
+                paso = true;
+            }
+            return paso;
+        }
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }

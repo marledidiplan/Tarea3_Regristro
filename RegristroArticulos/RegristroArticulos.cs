@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using RegristroArticulos.Entidades;
 using RegristroArticulos.UI.Regristro;
+using RegristroArticulos.UI.Consulta;
 
 namespace RegristroArticulos
 {
@@ -29,5 +30,12 @@ namespace RegristroArticulos
             regristroA.Show();
 
         }
+
+        private void consultasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            ConsultaA consultaA = new ConsultaA();
+            consultaA.Show();
+        }
+        
     }
 }
