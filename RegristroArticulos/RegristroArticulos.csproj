@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAL\Contexto.cs" />
     <Compile Include="Entidades\ArticulosProducto.cs" />
     <Compile Include="RegristroArticulos.cs">
       <SubType>Form</SubType>
