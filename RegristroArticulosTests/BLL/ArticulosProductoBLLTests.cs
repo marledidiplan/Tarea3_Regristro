@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using RegristroArticulos.Entidades;
 
 namespace RegristroArticulos.BLL.Tests
 {
@@ -13,7 +14,12 @@ namespace RegristroArticulos.BLL.Tests
         [TestMethod()]
         public void GuardarTest()
         {
-            Assert.Fail();
+            bool paso;
+            ArticulosProducto articulosProducto = new ArticulosProducto();
+            articulosProducto.IdArticulos = 0;
+            articulosProducto.Descripcion = "Prueba";
+            paso = ArticulosProductoBLL.Guardar(articulosProducto);
+            Assert.AreEqual(paso, true);
         }
 
         [TestMethod()]
@@ -36,6 +42,36 @@ namespace RegristroArticulos.BLL.Tests
 
         [TestMethod()]
         public void GetListTest()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void GuardarTest1()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void ModificarTest1()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void EliminarTest1()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void BuscarTest1()
+        {
+            Assert.Fail();
+        }
+
+        [TestMethod()]
+        public void GetListTest1()
         {
             Assert.Fail();
         }
