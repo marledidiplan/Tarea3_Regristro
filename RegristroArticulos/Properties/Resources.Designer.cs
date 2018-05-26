@@ -109,5 +109,15 @@ namespace RegristroArticulos.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap novo_documento_pagina_318_28677 {
+            get {
+                object obj = ResourceManager.GetObject("novo-documento-pagina_318-28677", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

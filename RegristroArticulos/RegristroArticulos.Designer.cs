@@ -36,6 +36,7 @@
             this.regristroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.articulosProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -74,6 +75,8 @@
             // 
             // regristroToolStripMenuItem
             // 
+            this.regristroToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.articulosProductosToolStripMenuItem});
             this.regristroToolStripMenuItem.Name = "regristroToolStripMenuItem";
             this.regristroToolStripMenuItem.Size = new System.Drawing.Size(66, 20);
             this.regristroToolStripMenuItem.Text = "Regristro";
@@ -89,6 +92,13 @@
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
             this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
+            // 
+            // articulosProductosToolStripMenuItem
+            // 
+            this.articulosProductosToolStripMenuItem.Name = "articulosProductosToolStripMenuItem";
+            this.articulosProductosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.articulosProductosToolStripMenuItem.Text = "Articulos Productos";
+            this.articulosProductosToolStripMenuItem.Click += new System.EventHandler(this.articulosProductosToolStripMenuItem_Click);
             // 
             // RegristroArticulos
             // 
@@ -118,6 +128,7 @@
         private System.Windows.Forms.ToolStripMenuItem regristroToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem consultasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem articulosProductosToolStripMenuItem;
     }
 }
 
