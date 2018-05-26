@@ -99,5 +99,15 @@ namespace RegristroArticulos.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap magnifying_glass_1976105_960_720 {
+            get {
+                object obj = ResourceManager.GetObject("magnifying-glass-1976105_960_720", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

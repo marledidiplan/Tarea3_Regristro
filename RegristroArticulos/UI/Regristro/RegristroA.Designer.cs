@@ -37,10 +37,13 @@
             this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.Buscarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Editarbutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -75,7 +78,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(60, 175);
+            this.label4.Location = new System.Drawing.Point(46, 168);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(37, 13);
             this.label4.TabIndex = 3;
@@ -93,7 +96,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(4, 233);
+            this.label6.Location = new System.Drawing.Point(4, 217);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(93, 13);
             this.label6.TabIndex = 5;
@@ -108,7 +111,7 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(103, 98);
+            this.textBox1.Location = new System.Drawing.Point(103, 91);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(202, 42);
@@ -116,10 +119,46 @@
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(103, 168);
+            this.textBox2.Location = new System.Drawing.Point(103, 161);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(232, 20);
             this.textBox2.TabIndex = 8;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(103, 214);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(232, 20);
+            this.textBox3.TabIndex = 12;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.CustomFormat = "dd/MM/yy";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dateTimePicker1.Location = new System.Drawing.Point(111, 55);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 13;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(383, 58);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.TabIndex = 14;
+            // 
+            // Buscarbutton
+            // 
+            this.Buscarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Buscarbutton.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Buscarbutton.Image = global::RegristroArticulos.Properties.Resources.magnifying_glass_1976105_960_720;
+            this.Buscarbutton.Location = new System.Drawing.Point(219, 19);
+            this.Buscarbutton.Name = "Buscarbutton";
+            this.Buscarbutton.Size = new System.Drawing.Size(86, 30);
+            this.Buscarbutton.TabIndex = 15;
+            this.Buscarbutton.Text = "Buscar";
+            this.Buscarbutton.UseVisualStyleBackColor = true;
             // 
             // Eliminarbutton
             // 
@@ -159,18 +198,14 @@
             this.Guardarbutton.TextAlign = System.Drawing.ContentAlignment.TopRight;
             this.Guardarbutton.UseVisualStyleBackColor = true;
             // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(103, 230);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(232, 20);
-            this.textBox3.TabIndex = 12;
-            // 
             // RegristroA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.Buscarbutton);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.Eliminarbutton);
             this.Controls.Add(this.Editarbutton);
@@ -185,7 +220,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Name = "RegristroA";
-            this.Text = "RegristroA";
+            this.Text = "b";
             this.Load += new System.EventHandler(this.RegristroA_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);
@@ -208,5 +243,8 @@
         private System.Windows.Forms.Button Editarbutton;
         private System.Windows.Forms.Button Eliminarbutton;
         private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Button Buscarbutton;
     }
 }

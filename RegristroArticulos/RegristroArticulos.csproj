@@ -50,6 +50,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\ArticulosProductoBLL.cs" />
     <Compile Include="DAL\Contexto.cs" />
     <Compile Include="Entidades\ArticulosProducto.cs" />
     <Compile Include="RegristroArticulos.cs">
@@ -95,7 +96,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="BLL\" />
     <Folder Include="UI\Colsuta\" />
   </ItemGroup>
   <ItemGroup>
@@ -112,6 +112,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="DAL\Scripts\Scripts.sql" />
+    <None Include="Resources\magnifying-glass-1976105_960_720.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

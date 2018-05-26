@@ -11,7 +11,7 @@ namespace RegristroArticulos.DAL
     //y heredamos de DbContext para que EntityFramework pueda funcionar
     public class Contexto : DbContext
     {
-        public DbSet<ArticulosProducto> Articulo { get; set; }
+        public DbSet<ArticulosProducto> ArticuloP { get; set; }
         //base(conStr) para pasar la conexion a la clase base de EntityFramework
         public Contexto() : base("ConStr")
         { }
