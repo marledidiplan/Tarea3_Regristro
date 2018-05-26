@@ -9,11 +9,16 @@ using System.Windows.Forms;
 
 namespace RegristroArticulos
 {
-    public partial class Form1 : Form
+    public partial class RegristroArticulos : Form
     {
-        public Form1()
+        public RegristroArticulos()
         {
             InitializeComponent();
+        }
+
+        private void RegristroArticulos_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
