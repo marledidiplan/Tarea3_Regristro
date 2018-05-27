@@ -45,17 +45,17 @@
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.Eliminarbutton = new System.Windows.Forms.Button();
             this.Guardarbutton = new System.Windows.Forms.Button();
-            this.ArticulosIderrorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.DescripcionerrorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.PrecioerrorProvider3 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.CantidadCotizadaerrorProvider4 = new System.Windows.Forms.ErrorProvider(this.components);
-            this.ExistenciaerrorProvider5 = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ArticulosIderrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.DescripcionerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.PrecioerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.CantidadCotizadaerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ExistenciaerrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ArticulosIderrorProvider1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DescripcionerrorProvider2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PrecioerrorProvider3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CantidadCotizadaerrorProvider4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ExistenciaerrorProvider5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ArticulosIderrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DescripcionerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrecioerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidadCotizadaerrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExistenciaerrorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -142,6 +142,7 @@
             this.CantidadCotizadatextBox.Name = "CantidadCotizadatextBox";
             this.CantidadCotizadatextBox.Size = new System.Drawing.Size(232, 20);
             this.CantidadCotizadatextBox.TabIndex = 12;
+            this.CantidadCotizadatextBox.TextChanged += new System.EventHandler(this.CantidadCotizadatextBox_TextChanged);
             // 
             // FechaVencimientodateTimePicker
             // 
@@ -164,7 +165,7 @@
             // 
             this.Nuevobutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Nuevobutton.Image = global::RegristroArticulos.Properties.Resources.novo_documento_pagina_318_28677;
-            this.Nuevobutton.Location = new System.Drawing.Point(570, 82);
+            this.Nuevobutton.Location = new System.Drawing.Point(232, 262);
             this.Nuevobutton.Name = "Nuevobutton";
             this.Nuevobutton.Size = new System.Drawing.Size(103, 51);
             this.Nuevobutton.TabIndex = 16;
@@ -189,7 +190,7 @@
             // 
             this.Eliminarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Eliminarbutton.Image = global::RegristroArticulos.Properties.Resources.abort_146072_640;
-            this.Eliminarbutton.Location = new System.Drawing.Point(570, 151);
+            this.Eliminarbutton.Location = new System.Drawing.Point(357, 262);
             this.Eliminarbutton.Name = "Eliminarbutton";
             this.Eliminarbutton.Size = new System.Drawing.Size(103, 51);
             this.Eliminarbutton.TabIndex = 11;
@@ -203,7 +204,7 @@
             this.Guardarbutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Guardarbutton.ForeColor = System.Drawing.SystemColors.WindowText;
             this.Guardarbutton.Image = global::RegristroArticulos.Properties.Resources.diskette_save_saveas_1514;
-            this.Guardarbutton.Location = new System.Drawing.Point(570, 12);
+            this.Guardarbutton.Location = new System.Drawing.Point(99, 262);
             this.Guardarbutton.Name = "Guardarbutton";
             this.Guardarbutton.Size = new System.Drawing.Size(103, 51);
             this.Guardarbutton.TabIndex = 9;
@@ -212,31 +213,31 @@
             this.Guardarbutton.UseVisualStyleBackColor = true;
             this.Guardarbutton.Click += new System.EventHandler(this.Guardarbutton_Click);
             // 
-            // ArticulosIderrorProvider1
+            // ArticulosIderrorProvider
             // 
-            this.ArticulosIderrorProvider1.ContainerControl = this;
+            this.ArticulosIderrorProvider.ContainerControl = this;
             // 
-            // DescripcionerrorProvider2
+            // DescripcionerrorProvider
             // 
-            this.DescripcionerrorProvider2.ContainerControl = this;
+            this.DescripcionerrorProvider.ContainerControl = this;
             // 
-            // PrecioerrorProvider3
+            // PrecioerrorProvider
             // 
-            this.PrecioerrorProvider3.ContainerControl = this;
+            this.PrecioerrorProvider.ContainerControl = this;
             // 
-            // CantidadCotizadaerrorProvider4
+            // CantidadCotizadaerrorProvider
             // 
-            this.CantidadCotizadaerrorProvider4.ContainerControl = this;
+            this.CantidadCotizadaerrorProvider.ContainerControl = this;
             // 
-            // ExistenciaerrorProvider5
+            // ExistenciaerrorProvider
             // 
-            this.ExistenciaerrorProvider5.ContainerControl = this;
+            this.ExistenciaerrorProvider.ContainerControl = this;
             // 
             // RegristroA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(587, 293);
             this.Controls.Add(this.Nuevobutton);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.ExistenciatextBox);
@@ -257,11 +258,11 @@
             this.Text = "Articulos Productos!";
             this.Load += new System.EventHandler(this.RegristroA_Load);
             ((System.ComponentModel.ISupportInitialize)(this.IdnumericUpDown)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ArticulosIderrorProvider1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.DescripcionerrorProvider2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PrecioerrorProvider3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.CantidadCotizadaerrorProvider4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ExistenciaerrorProvider5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ArticulosIderrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DescripcionerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PrecioerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.CantidadCotizadaerrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ExistenciaerrorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -285,10 +286,10 @@
         private System.Windows.Forms.TextBox ExistenciatextBox;
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.Button Nuevobutton;
-        private System.Windows.Forms.ErrorProvider ArticulosIderrorProvider1;
-        private System.Windows.Forms.ErrorProvider DescripcionerrorProvider2;
-        private System.Windows.Forms.ErrorProvider PrecioerrorProvider3;
-        private System.Windows.Forms.ErrorProvider CantidadCotizadaerrorProvider4;
-        private System.Windows.Forms.ErrorProvider ExistenciaerrorProvider5;
+        private System.Windows.Forms.ErrorProvider ArticulosIderrorProvider;
+        private System.Windows.Forms.ErrorProvider DescripcionerrorProvider;
+        private System.Windows.Forms.ErrorProvider PrecioerrorProvider;
+        private System.Windows.Forms.ErrorProvider CantidadCotizadaerrorProvider;
+        private System.Windows.Forms.ErrorProvider ExistenciaerrorProvider;
     }
 }

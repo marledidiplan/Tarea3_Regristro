@@ -34,6 +34,8 @@
             this.CriteriotextBox = new System.Windows.Forms.TextBox();
             this.Buscarbutton = new System.Windows.Forms.Button();
             this.ConsultadataGridView = new System.Windows.Forms.DataGridView();
+            this.DesdedateTimePicker = new System.Windows.Forms.DateTimePicker();
+            this.HastadateTimePicker = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.ConsultadataGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,10 +60,17 @@
             // FiltrarcomboBox
             // 
             this.FiltrarcomboBox.FormattingEnabled = true;
+            this.FiltrarcomboBox.Items.AddRange(new object[] {
+            "id ",
+            "Descripcion",
+            "Precio",
+            "Existencia",
+            "Cantiad Cotizada"});
             this.FiltrarcomboBox.Location = new System.Drawing.Point(67, 21);
             this.FiltrarcomboBox.Name = "FiltrarcomboBox";
             this.FiltrarcomboBox.Size = new System.Drawing.Size(121, 21);
             this.FiltrarcomboBox.TabIndex = 2;
+            this.FiltrarcomboBox.SelectedIndexChanged += new System.EventHandler(this.FiltrarcomboBox_SelectedIndexChanged);
             // 
             // CriteriotextBox
             // 
@@ -87,9 +96,27 @@
             this.ConsultadataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ConsultadataGridView.Location = new System.Drawing.Point(12, 48);
             this.ConsultadataGridView.Name = "ConsultadataGridView";
-            this.ConsultadataGridView.Size = new System.Drawing.Size(686, 317);
+            this.ConsultadataGridView.Size = new System.Drawing.Size(656, 282);
             this.ConsultadataGridView.TabIndex = 7;
             this.ConsultadataGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.ConsultadataGridView_CellContentClick);
+            // 
+            // DesdedateTimePicker
+            // 
+            this.DesdedateTimePicker.CustomFormat = "dd/MM/yyyy";
+            this.DesdedateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.DesdedateTimePicker.Location = new System.Drawing.Point(12, 284);
+            this.DesdedateTimePicker.Name = "DesdedateTimePicker";
+            this.DesdedateTimePicker.Size = new System.Drawing.Size(202, 20);
+            this.DesdedateTimePicker.TabIndex = 9;
+            // 
+            // HastadateTimePicker
+            // 
+            this.HastadateTimePicker.CustomFormat = "dd/MM/yyyy";
+            this.HastadateTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.HastadateTimePicker.Location = new System.Drawing.Point(12, 310);
+            this.HastadateTimePicker.Name = "HastadateTimePicker";
+            this.HastadateTimePicker.Size = new System.Drawing.Size(200, 20);
+            this.HastadateTimePicker.TabIndex = 10;
             // 
             // ConsultaA
             // 
@@ -97,6 +124,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.HastadateTimePicker);
+            this.Controls.Add(this.DesdedateTimePicker);
             this.Controls.Add(this.ConsultadataGridView);
             this.Controls.Add(this.Buscarbutton);
             this.Controls.Add(this.CriteriotextBox);
@@ -120,5 +149,7 @@
         private System.Windows.Forms.TextBox CriteriotextBox;
         private System.Windows.Forms.Button Buscarbutton;
         private System.Windows.Forms.DataGridView ConsultadataGridView;
+        private System.Windows.Forms.DateTimePicker DesdedateTimePicker;
+        private System.Windows.Forms.DateTimePicker HastadateTimePicker;
     }
 }

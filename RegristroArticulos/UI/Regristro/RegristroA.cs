@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using RegristroArticulos.Entidades;
 using RegristroArticulos.BLL;
 
+
 namespace RegristroArticulos.UI.Regristro
 {
     public partial class RegristroA : Form
@@ -107,38 +108,42 @@ namespace RegristroArticulos.UI.Regristro
             
 
         }
-        private bool Negar(int Negar)
+       public bool Validar()
         {
-            bool paso = false;
-            if (Negar == 1 && IdnumericUpDown.Value == 0)
+            bool HayErrores = false;
+                if(IdnumericUpDown.Value==0)
             {
-                ArticulosIderrorProvider1.SetError(IdnumericUpDown, "Digite Id del Articulo:");
-                paso = true;
+                ArticulosIderrorProvider.SetError(IdnumericUpDown, "Id:");
+                HayErrores = true;
             }
-            if(Negar==2 && DescripciontextBox.Text == String.Empty)
+            if(String.IsNullOrWhiteSpace(DescripciontextBox.Text))
             {
-                DescripcionerrorProvider2.SetError(DescripciontextBox, "Ingrese una Descripcion:");
-                paso = true;
+                DescripcionerrorProvider.SetError(DescripciontextBox, "Descripcion Vacio");
+                HayErrores = true;
             }
-            if(Negar==2 && PreciotextBox.Text==string.Empty)
+            if (PreciotextBox.Text==String.Empty) 
             {
-                PrecioerrorProvider3.SetError(PreciotextBox, "Ingrese el Precio");
-                paso = true;
+                PrecioerrorProvider.SetError(PreciotextBox, "Precio Vacio");
+                HayErrores = true;
             }
-            if(Negar==2 && ExistenciatextBox.Text==string.Empty)
+            if(ExistenciatextBox.Text==String.Empty)
             {
-                ExistenciaerrorProvider5.SetError(ExistenciatextBox, "Digite Cantidad de Existencia");
-                paso = true;
-
+                ExistenciaerrorProvider.SetError(ExistenciatextBox, "Existencia Vacia");
+                HayErrores = true;
             }
-            if(Negar==2 && CantidadCotizadatextBox.Text==string.Empty)
+            if(CantidadCotizadatextBox.Text==String.Empty)
             {
-                CantidadCotizadaerrorProvider4.SetError(CantidadCotizadatextBox, "Digite Cantidad Contizada");
-                paso = true;
+                CantidadCotizadaerrorProvider.SetError(CantidadCotizadatextBox, "Cantidad Cotizada Vacia");
+                HayErrores = true;
             }
-            return paso;
+            return HayErrores;
         }
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CantidadCotizadatextBox_TextChanged(object sender, EventArgs e)
         {
 
         }

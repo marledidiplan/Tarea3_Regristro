@@ -10,6 +10,9 @@ using RegristroArticulos.BLL;
 using RegristroArticulos.Entidades;
 using System.Linq.Expressions;
 using RegristroArticulos.UI.Consulta;
+using System.ComponentModel.DataAnnotations;
+
+
 
 namespace RegristroArticulos.UI.Consulta
 {
@@ -31,22 +34,25 @@ namespace RegristroArticulos.UI.Consulta
             {
                 case 0:
                     id= Convert.ToInt32(CriteriotextBox.Text);
-                    Filtro = a => a.IdArticulos == id;
+                    Filtro = a => a.IdArticulos == id
+                    && (a.FechaVencimiento <= DesdedateTimePicker.Value && a.FechaVencimiento <= HastadateTimePicker.Value);
+                    
                     break;
                 case 1:
-                    Filtro = a => a.FechaVencimiento.Equals(CriteriotextBox.Text);
+                    Filtro = a => a.Descripcion.Equals(CriteriotextBox.Text)
+                    && (a.FechaVencimiento <= DesdedateTimePicker.Value && a.FechaVencimiento <= HastadateTimePicker.Value);
                     break;
                 case 2:
-                    Filtro = a => a.Descripcion.Equals(CriteriotextBox.Text);
+                    Filtro = a => a.Precio.Equals(CriteriotextBox.Text)
+                    && (a.FechaVencimiento <= DesdedateTimePicker.Value && a.FechaVencimiento <= HastadateTimePicker.Value);
                     break;
                 case 3:
-                    Filtro = a => a.Precio.Equals(CriteriotextBox.Text);
+                    Filtro = a => a.Existencia.Equals(CriteriotextBox.Text)
+                    && (a.FechaVencimiento <= DesdedateTimePicker.Value && a.FechaVencimiento <= HastadateTimePicker.Value);
                     break;
                 case 4:
-                    Filtro = a => a.Existencia.Equals(CriteriotextBox.Text);
-                    break;
-                case 5:
-                    Filtro = a => a.CantidadCotizada.Equals(CriteriotextBox.Text);
+                    Filtro = a => a.CantidadCotizada.Equals(CriteriotextBox.Text)
+                    && (a.FechaVencimiento <= DesdedateTimePicker.Value && a.FechaVencimiento <= HastadateTimePicker.Value);
                     break;
             }
             ConsultadataGridView.DataSource = BLL.ArticulosProductoBLL.GetList(Filtro);
@@ -60,6 +66,12 @@ namespace RegristroArticulos.UI.Consulta
 
         private void ConsultadataGridView_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+
+        }
+
+        private void FiltrarcomboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
 
         }
     }

@@ -36,8 +36,8 @@
             this.regristroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.articulosProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.consultasToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ayudaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -85,7 +85,7 @@
             // articulosProductosToolStripMenuItem
             // 
             this.articulosProductosToolStripMenuItem.Name = "articulosProductosToolStripMenuItem";
-            this.articulosProductosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.articulosProductosToolStripMenuItem.Size = new System.Drawing.Size(178, 22);
             this.articulosProductosToolStripMenuItem.Text = "Articulos Productos";
             this.articulosProductosToolStripMenuItem.Click += new System.EventHandler(this.articulosProductosToolStripMenuItem_Click);
             // 
@@ -97,18 +97,18 @@
             this.consultasToolStripMenuItem.Size = new System.Drawing.Size(71, 20);
             this.consultasToolStripMenuItem.Text = "Consultas";
             // 
-            // ayudaToolStripMenuItem
-            // 
-            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
-            this.ayudaToolStripMenuItem.Text = "Ayuda";
-            // 
             // consultasToolStripMenuItem1
             // 
             this.consultasToolStripMenuItem1.Name = "consultasToolStripMenuItem1";
             this.consultasToolStripMenuItem1.Size = new System.Drawing.Size(192, 22);
             this.consultasToolStripMenuItem1.Text = "Consultas de Articulos";
             this.consultasToolStripMenuItem1.Click += new System.EventHandler(this.consultasToolStripMenuItem1_Click);
+            // 
+            // ayudaToolStripMenuItem
+            // 
+            this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(53, 20);
+            this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
             // RegristroArticulos
             // 
